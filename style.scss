@@ -1,0 +1,56 @@
+.header-region {
+    background: #FEF0D5;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+
+    .site-name {
+        margin-left: 20px;
+    }
+
+    .share-calendar {
+        margin-left: auto;
+    }
+
+    .social-networks {
+        margin-top: 13px;
+    }
+}
+
+.site-name {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #235C55;
+
+    .title {
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 3px;
+
+    }
+
+    .description {
+        margin-top: 0;
+        font-size: 16px;
+    }
+}
+
+.main-button {
+    background: #D81E5D;
+    font-family: sans-serif;
+    color: #FFE6DE;
+    text-decoration: none;
+    padding: 5px 11px;
+    border-radius: 14px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.site-logo {
+    .image {
+        width: 95px;
+    }
+
+    .social-networks {
+        text-align: center;
+    }
+}
