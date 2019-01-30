@@ -1,11 +1,27 @@
+$color-yellow: #FEF0D5;
+$color-blue: #235C55;
+$color-red: #D81E5D;
+$font-header: 'Roboto Condensed',
+sans-serif;
+$color-grey: #DBDBDB;
+$color-greydark: #535154;
+
+body {
+    font-family: sans-serif;
+}
+
 .header-region {
-    background: #FEF0D5;
-    display: flex;
-    align-items: center;
+    background: $color-yellow;
     padding: 10px;
+    margin-bottom: 30px;
+
+    .layout {
+        display: flex;
+        align-items: center;
+    }
 
     .site-name {
-        margin-left: 20px;
+        margin: 11px 0 0 20px;
     }
 
     .share-calendar {
@@ -13,18 +29,18 @@
     }
 
     .social-networks {
-        margin-top: 13px;
+        margin-top: 15px;
     }
 }
 
 .site-name {
-    font-family: 'Roboto Condensed', sans-serif;
-    color: #235C55;
+    font-family: $font-header;
+    color: $color-blue;
 
     .title {
         font-size: 32px;
         font-weight: bold;
-        margin-bottom: 3px;
+        margin-bottom: 0 0 5px 0;
 
     }
 
@@ -35,9 +51,9 @@
 }
 
 .main-button {
-    background: #D81E5D;
+    background: $color-red;
     font-family: sans-serif;
-    color: #FFE6DE;
+    color: $color-yellow;
     text-decoration: none;
     padding: 5px 11px;
     border-radius: 14px;
@@ -47,10 +63,61 @@
 
 .site-logo {
     .image {
-        width: 95px;
+        width: 99px;
     }
 
     .social-networks {
         text-align: center;
     }
+}
+
+.color-choice {
+    .lable {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .dropdown {
+        padding: 5px;
+        border: 1px solid $color-grey;
+        border-radius: 5px;
+    }
+}
+
+.single-calendar {
+    color: $color-greydark; //darken($color-grey, 60%);
+    margin-top: 50px;
+
+    .calendar {
+        border: 1px solid $color-blue;
+        width: 280px;
+        border-radius: 10px;
+        padding: 15px 10px;
+    }
+
+    .monthname {
+        font-family: $font-header;
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .weekdays {
+        color: lighten($color-greydark, 50%); //darken($color-grey, 60%);
+    }
+
+    .dayname {
+        font-weight: normal;
+        padding-bottom: 7px;
+    }
+
+    .daynumber {
+        padding: 15px 8px 15px 8px;
+        text-align: center;
+    }
+}
+
+._container {
+    max-width: 960px;
+    margin: 0 auto;
 }
