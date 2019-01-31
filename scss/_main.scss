@@ -1,0 +1,261 @@
+
+@mixin big-component-style() {
+  padding: 0 10px;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.header-region {
+  @include big-component-style();
+
+  background: $color-yellow;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+
+  .layout {
+      display: flex;
+      align-items: center;
+
+      @media (max-width: $width-small) {
+          flex-wrap: wrap;
+          text-align: center;
+      }
+  }
+
+  .site-logo {
+      @media (max-width: $width-small) {
+          margin: 0 auto;
+      }
+  }
+
+  .site-logo .image {
+      @media (max-width: $width-small) {
+          width: 50px;
+      }
+  }
+
+  .site-logo {
+      .image {
+          width: 99px;
+      }
+  }
+
+  .site-name {
+      margin: 11px 0 0 20px;
+  }
+
+  .share-calendar {
+      margin-left: auto;
+  }
+
+  .social-networks {
+      margin-top: 15px;
+  }
+}
+
+.site-name {
+  font-family: $font-header;
+  color: $color-blue;
+
+  .title {
+      font-size: 2rem; //32px; размер относительно html
+      font-weight: bold;
+      margin-bottom: 0 0 5px 0;
+
+  }
+
+  .description {
+      margin-top: 0;
+      font-size: 1rem; //16px;
+  }
+}
+
+.main-button {
+  background: $color-red;
+  font-family: sans-serif;
+  color: $color-yellow;
+  text-decoration: none;
+  padding: 5px 11px;
+  border-radius: 14px;
+  font-size: 0.8rem; //14px;
+  font-weight: bold;
+  border: 0;
+  cursor: pointer;
+  transition: 2s;
+
+  &:hover {
+      background: lighten($color-oncherry, 40%);
+      transition: 2s;
+  }
+
+  &.-big {
+      font-size: 1.3rem; //20px;
+      font-weight: normal;
+      border-radius: 20px;
+  }
+}
+
+
+.social-networks {
+  text-align: center;
+}
+
+
+.color-choice {
+  .lable {
+      font-weight: bold;
+      margin-bottom: 5px;
+  }
+
+  .dropdown {
+      padding: 5px;
+      border: 1px solid $color-grey;
+      border-radius: 5px;
+  }
+}
+
+.single-calendar {
+  color: $color-greydark; //darken($color-grey, 60%);
+  margin-top: 50px;
+
+  .signcontrol {
+      visibility: hidden;
+      font-size: 1rem; //15px;
+      vertical-align: middle;
+      cursor: pointer;
+
+      //opacity: 0;
+      &:hover {
+          color: $color-red;
+      }
+  }
+
+
+  .deletetable {
+      margin-right: 20px;
+  }
+
+  .addtable {
+      margin-left: 20px;
+  }
+
+  &:hover .signcontrol {
+      visibility: visible;
+  }
+
+  .calendar {
+      border: 1px solid $color-blue;
+      width: 280px;
+      border-radius: 10px;
+      padding: 15px 10px;
+  }
+
+  .monthname {
+      font-family: $font-header;
+      margin-bottom: 10px;
+      text-align: center;
+      font-size: 1.9rem //30px;
+  }
+
+
+  .weekdays {
+      color: lighten($color-greydark, 50%); //darken($color-grey, 60%);
+  }
+
+  .dayname {
+      font-weight: normal;
+      padding-bottom: 7px;
+
+      &:last-child {
+          color: $color-red;
+      }
+  }
+
+  .daynumber {
+      padding: 15px 8px 15px 8px;
+      text-align: center;
+
+      &:last-child {
+          color: $color-red;
+      }
+
+      &:hover {
+          background: $color-yellow;
+          cursor: pointer;
+      }
+  }
+}
+
+.control-panel {
+  @include big-component-style();
+}
+
+.calendar-list {
+  @include big-component-style();
+
+  .single-calendar {
+      margin-left: $calendar-gap;
+  }
+}
+
+.calendar-list .layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: -$calendar-gap;
+}
+
+.register-region {
+  margin: 50px 0;
+  padding: 50px 0;
+  background: url('../img/185.jpg');
+  background-size: cover;
+
+  .form-normal {
+      opacity: 0;
+      transition: 2s;
+  }
+
+  &:hover .form-normal {
+      animation: showform 2s;
+      opacity: 1;
+      transition: 2s;
+  }
+}
+
+.form-normal {
+
+  .input,
+  .select {
+      display: block;
+      width: 220px;
+      height: 33px;
+      margin: 12px auto;
+      border: 1px solid $color-greydark;
+      padding: 5px;
+      box-shadow: 0px 1px 1px 0px $color-red;
+      box-sizing: border-box;
+  }
+
+  .checkbox,
+  .radio {
+      display: block;
+      width: 220px;
+      margin: 0 auto;
+      color: $color-oncherry;
+  }
+
+  .checkbox {
+      cursor: pointer;
+      margin-bottom: 10px;
+  }
+
+  .submit {
+      display: block;
+      margin: 0 auto;
+      margin-top: 30px;
+  }
+}
+
