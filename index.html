@@ -20,8 +20,10 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <!--
     <script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
     <script src="https://yastatic.net/share2/share.js"></script>
+    -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
         crossorigin="anonymous">
 </head>
@@ -40,9 +42,9 @@
                 </div>
                 <div class="share-calendar">
                     <a href="#" class="main-button">Сохранить</a>
-                    <div class="social-networks">
+                    <!--<div class="social-networks">
                         <div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,twitter"></div>
-                    </div>
+                    </div>-->
                 </div>
             </div>
         </div>
@@ -52,7 +54,7 @@
             <div class="layout">
                 <div class="color-choice">
                     <p class="lable">Активный цвет</p>
-                    <select class="dropdown">
+                    <select class="dropdown" name="colselect">
                         <option value="red">Красный</option>
                         <option value="blue">Синий</option>
                         <option value="yellow">Желтый</option>
@@ -63,190 +65,11 @@
     </section>
     <section class="calendar-list">
         <div class="_container">
-            <div class="layout">
-                <div class="single-calendar">
+            <div class="wrapper layout">
+                <div class="single-calendar" id="month">
                     <table class="calendar">
-                        <caption class="monthname"> <i class="deletetable signcontrol far fa-minus-square"></i> Январь
-                            <i class="addtable signcontrol far fa-plus-square "></i></caption>
-                        <tr class="weekdays">
-                            <th class="dayname">Пн</th>
-                            <th class="dayname">Вт</th>
-                            <th class="dayname">Ср</th>
-                            <th class="dayname">Чт</th>
-                            <th class="dayname">Пт</th>
-                            <th class="dayname">Сб</th>
-                            <th class="dayname">Вс</th>
-                        </tr>
-                        <tr class="week">
-                            <td class="daynumber">1</td>
-                            <td class="daynumber">2</td>
-                            <td class="daynumber">3</td>
-                            <td class="daynumber">4</td>
-                            <td class="daynumber">5</td>
-                            <td class="daynumber">6</td>
-                            <td class="daynumber">7</td>
-                        </tr>
-                        <tr class="week">
-                            <td class="daynumber">8</td>
-                            <td class="daynumber">9</td>
-                            <td class="daynumber">10</td>
-                            <td class="daynumber">11</td>
-                            <td class="daynumber">12</td>
-                            <td class="daynumber">13</td>
-                            <td class="daynumber">14</td>
-                        </tr>
-                        <tr class="week">
-                            <td class="daynumber">15</td>
-                            <td class="daynumber">16</td>
-                            <td class="daynumber">17</td>
-                            <td class="daynumber">18</td>
-                            <td class="daynumber">19</td>
-                            <td class="daynumber">20</td>
-                            <td class="daynumber">21</td>
-                        </tr>
-                        <tr class="week">
-                            <td class="daynumber">22</td>
-                            <td class="daynumber">23</td>
-                            <td class="daynumber">24</td>
-                            <td class="daynumber">25</td>
-                            <td class="daynumber">26</td>
-                            <td class="daynumber">27</td>
-                            <td class="daynumber">28</td>
-                        </tr>
-                        <tr class="week">
-                            <td class="daynumber">29</td>
-                            <td class="daynumber">30</td>
-                            <td class="daynumber">31</td>
-                            <td class="daynumber"></td>
-                            <td class="daynumber"></td>
-                            <td class="daynumber"></td>
-                            <td class="daynumber"></td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="single-calendar">
-                    <table class="calendar">
-                        <caption class="monthname"> <i class="deletetable signcontrol far fa-minus-square"></i> Январь
-                            <i class="addtable signcontrol far fa-plus-square "></i></caption>
-                        <tr class="weekdays">
-                            <th class="dayname">Пн</th>
-                            <th class="dayname">Вт</th>
-                            <th class="dayname">Ср</th>
-                            <th class="dayname">Чт</th>
-                            <th class="dayname">Пт</th>
-                            <th class="dayname">Сб</th>
-                            <th class="dayname">Вс</th>
-                        </tr>
-                        <tr class="week">
-                            <td class="daynumber">1</td>
-                            <td class="daynumber">2</td>
-                            <td class="daynumber">3</td>
-                            <td class="daynumber">4</td>
-                            <td class="daynumber">5</td>
-                            <td class="daynumber">6</td>
-                            <td class="daynumber">7</td>
-                        </tr>
-                        <tr class="week">
-                            <td class="daynumber">8</td>
-                            <td class="daynumber">9</td>
-                            <td class="daynumber">10</td>
-                            <td class="daynumber">11</td>
-                            <td class="daynumber">12</td>
-                            <td class="daynumber">13</td>
-                            <td class="daynumber">14</td>
-                        </tr>
-                        <tr class="week">
-                            <td class="daynumber">15</td>
-                            <td class="daynumber">16</td>
-                            <td class="daynumber">17</td>
-                            <td class="daynumber">18</td>
-                            <td class="daynumber">19</td>
-                            <td class="daynumber">20</td>
-                            <td class="daynumber">21</td>
-                        </tr>
-                        <tr class="week">
-                            <td class="daynumber">22</td>
-                            <td class="daynumber">23</td>
-                            <td class="daynumber">24</td>
-                            <td class="daynumber">25</td>
-                            <td class="daynumber">26</td>
-                            <td class="daynumber">27</td>
-                            <td class="daynumber">28</td>
-                        </tr>
-                        <tr class="week">
-                            <td class="daynumber">29</td>
-                            <td class="daynumber">30</td>
-                            <td class="daynumber">31</td>
-                            <td class="daynumber"></td>
-                            <td class="daynumber"></td>
-                            <td class="daynumber"></td>
-                            <td class="daynumber"></td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="single-calendar">
-                    <table class="calendar">
-                        <caption class="monthname"> <i class="deletetable signcontrol far fa-minus-square"></i> Январь
-                            <i class="addtable signcontrol far fa-plus-square "></i></caption>
-                        <tr class="weekdays">
-                            <th class="dayname">Пн</th>
-                            <th class="dayname">Вт</th>
-                            <th class="dayname">Ср</th>
-                            <th class="dayname">Чт</th>
-                            <th class="dayname">Пт</th>
-                            <th class="dayname">Сб</th>
-                            <th class="dayname">Вс</th>
-                        </tr>
-                        <tr class="week">
-                            <td class="daynumber">1</td>
-                            <td class="daynumber">2</td>
-                            <td class="daynumber">3</td>
-                            <td class="daynumber">4</td>
-                            <td class="daynumber">5</td>
-                            <td class="daynumber">6</td>
-                            <td class="daynumber">7</td>
-                        </tr>
-                        <tr class="week">
-                            <td class="daynumber">8</td>
-                            <td class="daynumber">9</td>
-                            <td class="daynumber">10</td>
-                            <td class="daynumber">11</td>
-                            <td class="daynumber">12</td>
-                            <td class="daynumber">13</td>
-                            <td class="daynumber">14</td>
-                        </tr>
-                        <tr class="week">
-                            <td class="daynumber">15</td>
-                            <td class="daynumber">16</td>
-                            <td class="daynumber">17</td>
-                            <td class="daynumber">18</td>
-                            <td class="daynumber">19</td>
-                            <td class="daynumber">20</td>
-                            <td class="daynumber">21</td>
-                        </tr>
-                        <tr class="week">
-                            <td class="daynumber">22</td>
-                            <td class="daynumber">23</td>
-                            <td class="daynumber">24</td>
-                            <td class="daynumber">25</td>
-                            <td class="daynumber">26</td>
-                            <td class="daynumber">27</td>
-                            <td class="daynumber">28</td>
-                        </tr>
-                        <tr class="week">
-                            <td class="daynumber">29</td>
-                            <td class="daynumber">30</td>
-                            <td class="daynumber">31</td>
-                            <td class="daynumber"></td>
-                            <td class="daynumber"></td>
-                            <td class="daynumber"></td>
-                            <td class="daynumber"></td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="single-calendar">
-                    <table class="calendar">
-                        <caption class="monthname"> <i class="deletetable signcontrol far fa-minus-square"></i> Январь
+                        <caption class="monthname">
+                            <i class="deletetable signcontrol far fa-minus-square"></i> Январь
                             <i class="addtable signcontrol far fa-plus-square "></i></caption>
                         <tr class="weekdays">
                             <th class="dayname">Пн</th>
@@ -324,7 +147,7 @@
                     <input class="input" type="date" name="test1" id="test1">
                     <input class="input" type="range" name="test2" id="test2">
                     <input class="input" type="number" name="test3" id="test4">
-                    <select class="select" name="Age">
+                    <select class="select" name="Age" id="age">
                         <option value="0">- Age -</option>
                         <option value="10">1-10</option>
                         <option value="20">11-20</option>
@@ -353,6 +176,7 @@
             </div>
         </div>
     </div>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
