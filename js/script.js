@@ -117,7 +117,9 @@ plus.forEach(function (item) {
         console.log(monthIndex);
         if (monthIndex < 11) {
             divClone[++monthIndex] = div.cloneNode(true);
-            wrap.appendChild(divClone[monthIndex]);        
+            wrap.appendChild(divClone[monthIndex]); 
+            plus = document.querySelectorAll('.addtable');
+            console.log(plus     );
         } 
     });
 }
@@ -129,6 +131,7 @@ min.forEach(function (item) {
     {
         wrap.removeChild(divClone[monthIndex])
         monthIndex--;
+        min = document.querySelectorAll('.deletetable');
         }
     });
 }
